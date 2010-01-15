@@ -312,7 +312,7 @@ namespace ZedGraph
 			using (Graphics g = this.CreateGraphics())
 			{
 				IntPtr hdc = g.GetHdc();
-				Metafile metaFile = new Metafile(hdc, EmfType.EmfPlusOnly);
+				Metafile metaFile = new Metafile(hdc, EmfType.EmfPlusDual);
 				g.ReleaseHdc(hdc);
 
 				using (Graphics gMeta = Graphics.FromImage(metaFile))
@@ -514,7 +514,7 @@ namespace ZedGraph
 			using (Graphics g = this.CreateGraphics())
 			{
 				IntPtr hdc = g.GetHdc();
-				Metafile metaFile = new Metafile(hdc, EmfType.EmfPlusOnly);
+				Metafile metaFile = new Metafile(hdc, EmfType.EmfPlusDual);
 				using (Graphics gMeta = Graphics.FromImage(metaFile))
 				{
 					//PaneBase.SetAntiAliasMode( gMeta, IsAntiAlias );

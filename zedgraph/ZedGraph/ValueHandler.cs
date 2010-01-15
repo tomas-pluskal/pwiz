@@ -345,7 +345,8 @@ namespace ZedGraph
 										  double val, int iOrdinal )
 		{
 			Axis baseAxis = curve.BaseAxis( _pane );
-			if ( curve is ErrorBarItem || curve is HiLowBarItem ||
+            // nicksh: HiLowBarItems are handled in the else clause like other bars
+			if ( curve is ErrorBarItem || //curve is HiLowBarItem ||
 					curve is OHLCBarItem || curve is JapaneseCandleStickItem )
 			{
 				if ( baseAxis._scale.IsAnyOrdinal && iCluster >= 0 && !curve.IsOverrideOrdinal )
