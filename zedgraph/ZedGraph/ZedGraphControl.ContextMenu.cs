@@ -528,7 +528,7 @@ namespace ZedGraph
 				}
 
 				ClipboardMetafileHelper.SaveEnhMetafileToFile(metaFile, fileName );
-
+                
 				g.ReleaseHdc(hdc);
 				//g.Dispose();
 			}
@@ -558,7 +558,8 @@ namespace ZedGraph
 				if (!hEMF.Equals(new IntPtr(0)))
 				{
 					StringBuilder tempName = new StringBuilder(fileName);
-					CopyEnhMetaFile(hEMF, tempName);
+					IntPtr hEMF2 = CopyEnhMetaFile(hEMF, tempName);
+				    DeleteEnhMetaFile(hEMF2);
 					DeleteEnhMetaFile(hEMF);
 				}
 				return bResult;
