@@ -1015,7 +1015,7 @@ namespace ZedGraph
 				IntPtr hdc = g.GetHdc();
 				Stream stream = new MemoryStream();
 				Metafile metafile = new Metafile( stream, hdc, _rect,
-							MetafileFrameUnit.Pixel, EmfType.EmfOnly );
+							MetafileFrameUnit.Pixel, EmfType.EmfPlusDual );
 
 				using ( Graphics metafileGraphics = Graphics.FromImage( metafile ) )
 				{

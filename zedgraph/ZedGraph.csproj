@@ -14,6 +14,8 @@
     <OldToolsVersion>2.0</OldToolsVersion>
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>ZedGraph.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -182,6 +184,9 @@
     <EmbeddedResource Include="ZedGraph\ZedGraphLocale.zh-cn.resx" />
     <EmbeddedResource Include="ZedGraph\ZedGraphLocale.zh-tw.resx" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="ZedGraph.snk" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
@@ -190,4 +195,9 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <PropertyGroup>
+    <PostBuildEvent>copy $(ProjectDir)$(OutDir)zedgraph.dll $(ProjectDir)..\pwiz\pwiz_tools\Shared\lib\zedgraph.dll
+copy $(ProjectDir)$(OutDir)zedgraph.pdb $(ProjectDir)..\pwiz\pwiz_tools\Shared\lib\zedgraph.pdb
+</PostBuildEvent>
+  </PropertyGroup>
 </Project>
