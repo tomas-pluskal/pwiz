@@ -514,19 +514,7 @@ namespace ZedGraph
 			using (Graphics g = this.CreateGraphics())
 			{
 				IntPtr hdc = g.GetHdc();
-				Metafile metaFile = new Metafile(hdc, EmfType.EmfPlusDual);
-				using (Graphics gMeta = Graphics.FromImage(metaFile))
-				{
-					//PaneBase.SetAntiAliasMode( gMeta, IsAntiAlias );
-					//gMeta.CompositingMode = CompositingMode.SourceCopy; 
-					//gMeta.CompositingQuality = CompositingQuality.HighQuality;
-					//gMeta.InterpolationMode = InterpolationMode.HighQualityBicubic;
-					//gMeta.SmoothingMode = SmoothingMode.AntiAlias;
-					//gMeta.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality; 
-					this._masterPane.Draw(gMeta);
-					//gMeta.Dispose();
-				}
-
+			    Metafile metaFile = this._masterPane.GetMetafile();
 				ClipboardMetafileHelper.SaveEnhMetafileToFile(metaFile, fileName );
                 
 				g.ReleaseHdc(hdc);
