@@ -32,9 +32,15 @@
     
     <!-- Content goes here. -->
 
-    <h1>We are updating this page</h1>
+    <h1>Building ProteoWizard for use in your own Windows programs</h1>
 
-<P> Check back soon </P>
+<P> Check the <a href="http://proteowizard.sourceforge.net/downloads.shtml">downloads</a> page for information on downloading source and binaries for use in your own projects. </P>
+
+<p>
+	Officially, the ProteoWizard libraries and tools are built using the <a href="http://www.boost.org/boost-build2/doc/html/bbv2/jam.html">bjam</a> build system, but we also provide alternate semi-official build files for MSVC (.sln and .vc(x)proj for VC8, 9, and 10) and for GNU/Autotools (the familiar old "configure ; make ; make install").  Note that these alternate build files do not support vendor DLLs: maintaining that capability is complex and thus limited to the officially supported bjam build.  You can read more about it  <a href="http://proteowizard.svn.sourceforge.net/viewvc/proteowizard/trunk/pwiz/scripts/autotools/FAQ">here</a>.</p>
+<p>
+
+<P> If you download the files for building with MSVC or GNU/GCC, you will find many examples of programs that link with the ProteoWizard library.</P>
 
 
     <!-- End of Content  -->

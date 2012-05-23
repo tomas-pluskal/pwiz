@@ -55,6 +55,9 @@
      There is no formal installer for Mac or Linux. For installation help see our <a href="user_installation.shtml"> installation</a> page. On Windows, we recommend using the installer. You must have <a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=ab99342f-5d1a-413d-8319-81da479ab0d7&displaylang=en" target="_blank">.NET Framework 3.5 SP1</a> and <a href="http://www.microsoft.com/download/en/details.aspx?id=17851" target="_blank">4.0</a> installed: both versions are currently required for vendor DLL support.
 
 </p>
+<p>
+	Developers interested in building ProteoWizard libraries for use in their own projects will note that there are a few choices for source distributions.  Officially, the ProteoWizard libraries and tools are built using the <a href="http://www.boost.org/boost-build2/doc/html/bbv2/jam.html">bjam</a> build system, but we also provide alternate semi-official build files for MSVC (.sln and .vc(x)proj for VC8, 9, and 10) and for GNU/Autotools (the familiar old "configure ; make ; make install").  Note that these alternate build files do not support vendor DLLs: maintaining that capability is complex and thus limited to the officially supported bjam build.  You can read more about it  <a href="http://proteowizard.svn.sourceforge.net/viewvc/proteowizard/trunk/pwiz/scripts/autotools/FAQ">here</a>.</p>
+<p>
 <HR>
 
 <form action="http://colocsvr.camm.usc.edu/download.php" method="post">
@@ -71,9 +74,10 @@
   <OPTION value="bt83">Windows 64-bit tar.bz2 (no Bruker or T2D support)</OPTION>  
   <OPTION value="bt23">Macintosh (NO vendor reader support)</OPTION>
   <OPTION value="bt17">Linux 64 bit (NO vendor reader support)</OPTION>
-  <OPTION value="bt81">Source (includes vendor reader support)</OPTION>
-  <OPTION value="bt81n">Source (NO vendor reader support)</OPTION>
-
+  <OPTION value="bt81">Source, bjam build (includes vendor reader support)</OPTION>
+  <OPTION value="bt81n">Source, bjam build (NO vendor reader support)</OPTION>
+  <OPTION value="bt211">Source, MSVC build (NO vendor reader support)</OPTION>
+  <OPTION value="bt212">Source, GNU Autotools build (NO vendor reader support)</OPTION>
 </SELECT>
 <!--  <OPTION value="bt22">Linux</OPTION>  -->
 </UL>
