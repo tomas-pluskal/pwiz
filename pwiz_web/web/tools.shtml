@@ -106,6 +106,7 @@
     <option value="tools/chainsaw.html">chainsaw</option>
     <option value="tools/msaccess.html">msAccess</option>
     <option value="tools/msconvert.html">msConvert</option>
+    <option value="tools/idconvert.html">idConvert</option>
     <option value="tools/mspicture.html">msPicture</option>
 
 </select>
