@@ -256,7 +256,9 @@ namespace ZedGraph
 		/// Determine if a mouse point is within any <see cref="GraphObj"/>, and if so, 
 		/// return the index number of the the <see cref="GraphObj"/>.
 		/// </summary>
-		/// <param name="mousePt">The screen point, in pixel coordinates.</param>
+        /// <remarks>Change Aug 9, 2012 (nicksh): Iterate through items in forward order, 
+        /// to correctly honor GraphObj ZOrder</remarks>
+        /// <param name="mousePt">The screen point, in pixel coordinates.</param>
 		/// <param name="pane">
 		/// A reference to the <see cref="PaneBase"/> object that is the parent or
 		/// owner of this object.
@@ -282,8 +284,10 @@ namespace ZedGraph
 		{
 			index = -1;
 			
-			// Search in reverse direction to honor the Z-order
-			for ( int i=Count-1; i>=0; i-- )
+            // Search in forward direction to honor the ZOrder
+            // Items earlier in the list paint in front of items later in the list with
+            // the same ZOrder value.
+			for ( int i=0; i<Count; i++ )
 			{
 				if ( this[i].PointInBox( mousePt, pane, g, scaleFactor ) )
 				{

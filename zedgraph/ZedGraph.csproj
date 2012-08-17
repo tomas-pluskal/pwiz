@@ -2,7 +2,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{B99650EE-AF46-47B4-A4A9-212ADE7809B7}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -168,21 +168,51 @@
       <SubType>Designer</SubType>
       <DependentUpon>ZedGraphControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ZedGraph\ZedGraphLocale.de.resx" />
-    <EmbeddedResource Include="ZedGraph\ZedGraphLocale.es.resx" />
-    <EmbeddedResource Include="ZedGraph\ZedGraphLocale.fr.resx" />
-    <EmbeddedResource Include="ZedGraph\ZedGraphLocale.hu.resx" />
-    <EmbeddedResource Include="ZedGraph\ZedGraphLocale.it.resx" />
-    <EmbeddedResource Include="ZedGraph\ZedGraphLocale.ja.resx" />
-    <EmbeddedResource Include="ZedGraph\ZedGraphLocale.pt.resx" />
-    <EmbeddedResource Include="ZedGraph\ZedGraphLocale.resx" />
-    <EmbeddedResource Include="ZedGraph\ZedGraphLocale.ru.resx" />
-    <EmbeddedResource Include="ZedGraph\ZedGraphLocale.sk.resx" />
-    <EmbeddedResource Include="ZedGraph\ZedGraphLocale.sv.resx" />
-    <EmbeddedResource Include="ZedGraph\ZedGraphLocale.tr.resx" />
-    <EmbeddedResource Include="ZedGraph\ZedGraphLocale.tw.resx" />
-    <EmbeddedResource Include="ZedGraph\ZedGraphLocale.zh-cn.resx" />
-    <EmbeddedResource Include="ZedGraph\ZedGraphLocale.zh-tw.resx" />
+    <EmbeddedResource Include="ZedGraph\ZedGraphLocale.de.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZedGraph\ZedGraphLocale.es.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZedGraph\ZedGraphLocale.fr.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZedGraph\ZedGraphLocale.hu.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZedGraph\ZedGraphLocale.it.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZedGraph\ZedGraphLocale.ja.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZedGraph\ZedGraphLocale.pt.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZedGraph\ZedGraphLocale.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZedGraph\ZedGraphLocale.ru.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZedGraph\ZedGraphLocale.sk.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZedGraph\ZedGraphLocale.sv.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZedGraph\ZedGraphLocale.tr.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZedGraph\ZedGraphLocale.tw.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZedGraph\ZedGraphLocale.zh-cn.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZedGraph\ZedGraphLocale.zh-tw.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="ZedGraph.snk" />
