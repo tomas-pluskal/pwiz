@@ -287,7 +287,18 @@ namespace ZedGraph
 			PointF pix = _location.TransformTopLeft( pane );
 			PointF pix2 = _location.TransformBottomRight( pane );
 
-			using ( Pen pen = new Pen( Color.Black, (float)GraphPane.Default.NearestTol * 2.0F ) )
+            float tolerance = (float)GraphPane.Default.NearestTol * 2.0F;
+            // nicksh: "GraphicsPath.IsOutlineVisible" can be slow, so do a first check to see if 
+            // the point is at all near this Line.
+		    var boundingBox = new RectangleF(Math.Min(pix.X, pix2.X), Math.Min(pix.Y, pix2.Y), 
+                                             Math.Abs(pix.X - pix2.X), Math.Abs(pix.Y - pix2.Y));
+            boundingBox.Inflate(tolerance, tolerance);
+            if (!boundingBox.Contains(pt))
+            {
+                return false;
+            }
+
+			using ( Pen pen = new Pen( Color.Black, tolerance))
 			{
 				using ( GraphicsPath path = new GraphicsPath() )
 				{
